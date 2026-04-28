@@ -95,16 +95,12 @@ function animate()
 	
 	
 
-	while(platform1.hitTestPoint(player.top()) && player.vy <=0)
+	while(platform1.hitTestPoint(player.bottom()) && player.vy >=0)
 	{
-		player.y++;
+		player.y--;
 		player.vy = 0;
+		player.canJump = true;
 	}
-	
-	
-
-
-
 	
 	if(player.hitTestObject(goal))
 	{
